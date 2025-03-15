@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Generate passwords with our random password generator.</h1>
+        <input type="text" id="password" readonly>
+        <div id="strength"></div>
+        <progress id="strengthMeter" max="100" value="0"></progress>
+        <label for="length">Length: <span id="lengthValue">16</span></label>
+        <input type="range" id="length" min="4" max="128" value="16">
+        <button id="generate">Generate Password</button> <!-- Added button -->
+        <button id="copy">Copy Password</button>
+        <div class="options">
+            <label>
+                <input type="checkbox" id="includeLetters" checked> Letters (e.g. Aa)
+                <!-- Removed minLetters input -->
+            </label>
+            <label>
+                <input type="checkbox" id="includeDigits" checked> Digits (e.g. 3,4,5)
+                <!-- Removed minDigits input -->
+            </label>
+            <label>
+                <input type="checkbox" id="includeSymbols"> Symbols (@#$!%?)
+                <!-- Removed minSymbols input -->
+            </label>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
